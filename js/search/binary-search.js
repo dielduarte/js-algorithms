@@ -3,10 +3,11 @@ function binarySearchRecursively(array, x, left, right) {
 
   const mid = Math.ceil(left + (right - left) / 2);
 
+
   if (array[mid] === x) return mid;
-
+  
   if (array[mid] > x) return binarySearchRecursively(array, x, left, mid - 1);
-
+  
   return binarySearchRecursively(array, x, mid + 1, right);
 }
 
@@ -29,4 +30,5 @@ function binarySearch(array, x, left, right) {
   return -1;
 }
 
-console.log(binarySearch(array, 1, 0, array.length - 1));
+console.log(binarySearchRecursively(array, 1, 0, array.length - 1));
+
